@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "678758997036",
+    "project_id": "car-sharing-302ed",
+    "storage_bucket": "car-sharing-302ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678758997036:android:ed045e67e089848dadc589",
+        "android_client_info": {
+          "package_name": "shady.samir.carsharing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678758997036-741v312ip71ni794n0gosqa207ctpp2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDk_g-jLMzBYHzl3D-q_2ZJQD2sucklxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678758997036-741v312ip71ni794n0gosqa207ctpp2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

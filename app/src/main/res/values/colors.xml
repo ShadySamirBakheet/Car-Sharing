@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="main">#0CBA70</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--App Color-->
+    <color name="btnColor1">#0CBA70</color>
+    <color name="btnColor2">#ffffff</color>
+    <color name="btnColor3">#B1B0B0</color>
+    <color name="btnColor4">#2F3133</color>
+    <color name="btnColor5">#C50101</color>
+
+    <color name="conColor3">#d5d5d5</color>
+    <color name="conColor4">#EE0F0F</color>
+
+    <color name="txtColor1">#FF000000</color>
+    <color name="txtColor2">#FFFFFFFF</color>
+    <color name="txtColor3">#0CBA70</color>
+    <color name="txtColor4">#808080</color>
+
+    <color name="border">#E2E2E2</color>
+
+    <color name="statusBarColor">#0CBA70</color>
+    <color name="bottomBar">#F1F1F1</color>
+
+    <color name="background">#FFFFFFFF</color>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pointNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@drawable/btn5"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_6sdp"
+        android:text="Point 1"
+        android:textColor="@color/txtColor2"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@id/pointName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Cairo"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:textColor="@color/txtColor1"
+        android:textSize="@dimen/_13sdp" />
+
+</LinearLayout>

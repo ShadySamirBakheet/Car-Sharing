@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image1" />
+
+        <TextView
+            android:id="@+id/doneTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_24sdp"
+            android:layout_gravity="end"
+            android:text="Done Trip"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/txtColor2"
+            android:background="@drawable/btn_app3"/>
+
+        <LinearLayout
+            android:id="@+id/remid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_4sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/check1">
+
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:padding="@dimen/_1sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chair" />
+
+            <TextView
+                android:id="@+id/seatNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/txtColor2"
+                android:textSize="@dimen/_12ssp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:text="Asyut (Eastern Road)"
+            android:textColor="@color/txtColor1"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_below="@id/name"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="180"
+            android:textColor="@color/txtColor3"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_below="@id/price"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lancer EX 2015"
+            android:drawableStart="@drawable/ic_car"
+            android:drawablePadding="@dimen/_6sdp"
+            android:drawableTint="@color/txtColor4"
+            android:textColor="@color/txtColor4"
+            android:textSize="@dimen/_10ssp"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">مشاركة السيارة</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_add_trip">Add a Trip</string>
+    <string name="title_messages">Messages</string>
+    <string name="i_accept_the_terms_and_conditions_of_this_service">
+        <font color="@color/txtColor1">I Accept the</font>
+        <font color="@color/txtColor3"> terms and conditions </font>
+        <font color="@color/txtColor1">of this service.</font>
+    </string>
+    <string name="payment_method">Payment Method</string>
+    <string name="confirm_join">Confirm Join</string>
+</resources>

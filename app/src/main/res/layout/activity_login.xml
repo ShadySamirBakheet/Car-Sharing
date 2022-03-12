@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.loginsystem.LoginActivity">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_32sdp"
+                app:srcCompat="@drawable/logo2"
+                app:tint="@color/main"
+                android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_50sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:autoSizeTextType="uniform"
+                    android:inputType="phone"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_50sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="FORGOT PASSWORD?"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/txtColor3"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="SIGN IN"
+                android:gravity="center"
+                style="@style/btnStyleHome"/>
+
+            <TextView
+                android:id="@+id/signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="SIGN UP"
+                android:gravity="center"
+                android:background="@drawable/btn_app2"
+                style="@style/btnStyleHome"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

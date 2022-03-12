@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".views.home.MainActivity">
+
+    <ImageView
+        android:id="@+id/startImg"
+        android:layout_width="@dimen/_175sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/logo2"
+        app:tint="@color/white"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>

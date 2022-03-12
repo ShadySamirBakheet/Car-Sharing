@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:singleLine="true"
+    android:text="@string/app_name"
+    android:textColor="@color/txtColor4"
+    android:textSize="16dp"
+    android:layout_margin="4dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+    android:paddingVertical="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"/>

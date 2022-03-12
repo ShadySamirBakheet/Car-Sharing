@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.trips.TripEditActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/goBack"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/txtColor1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Edit Trip"
+                android:textColor="@color/txtColor1"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/done_mark"
+                app:tint="@color/txtColor1" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape2">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Trip Title"
+                    android:autoSizeTextType="uniform"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Image of your trip"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_4sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/txtColor1"/>
+
+
+            <RelativeLayout
+                android:id="@+id/getImage"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/con_app">
+
+                <ImageView
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_camera" />
+
+                <ImageView
+                    android:id="@+id/setImage"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardBackgroundColor="@color/btnColor5">
+
+                    <ImageView
+                        android:id="@+id/deleteImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_4sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_delete"
+                        app:tint="@color/btnColor2" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape2">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Price of all Trip"
+                    android:autoSizeTextType="uniform"
+                    android:inputType="number"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EGP"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/txtColor3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/round_shape2">
+
+                    <Spinner
+                        android:id="@+id/hourGo"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtColor1"
+                        tools:listitem="@layout/item_spinner" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_8sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/txtColor4"/>
+
+                    <TextView
+                        android:id="@+id/goTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AM"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_8sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/txtColor4"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/round_shape2">
+
+                    <Spinner
+                        android:id="@+id/hourBack"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtColor1"
+                        tools:listitem="@layout/item_spinner" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_8sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/txtColor4"/>
+
+                    <TextView
+                        android:id="@+id/backTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AM"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_8sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/txtColor4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_shape2">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/carModel"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Model"
+                        android:autoSizeTextType="uniform"
+                        android:inputType="text"
+                        android:textSize="@dimen/_14ssp"
+                        android:padding="@dimen/_8sdp"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:background="@drawable/round_shape2">
+
+                    <Spinner
+                        android:id="@+id/seatNumber"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtColor1"
+                        tools:listitem="@layout/item_spinner" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape2">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Discription"
+                    android:textAlignment="gravity"
+                    android:gravity="top|start"
+                    android:autoSizeTextType="uniform"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trip Passing Points:"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_4sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/txtColor1"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tripAdded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="1"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_point_trip_added"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape2">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pointName"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Point ..."
+                    android:autoSizeTextType="uniform"
+                    android:inputType="text"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:alpha=".7"
+                    android:background="@color/txtColor4"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pointPrice"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:autoSizeTextType="uniform"
+                    android:inputType="number"
+                    android:textSize="@dimen/_14ssp"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EGP"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/txtColor3"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/addPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_gravity="end"
+                android:text="Add Point"
+                android:drawableStart="@drawable/ic_add_one"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center"
+                android:clickable="true"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/txtColor2"
+                android:background="@drawable/btn_app3"/>
+
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="Delete"
+                android:paddingHorizontal="@dimen/_32sdp"
+                android:gravity="center"
+                android:background="@drawable/btn_app4"
+                style="@style/btnStyleHome"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
