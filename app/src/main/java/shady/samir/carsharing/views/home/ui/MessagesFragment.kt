@@ -146,15 +146,18 @@ class MessagesFragment : Fragment() {
                                         Log.e("MSG", "true")
                                         if (msg != null) {
                                             Log.e("MSG", msg.toString())
-                                            usersMsg.add(
-                                                MessageUser(
-                                                    user,
-                                                    msg!!.dataMsg.toString(),
-                                                    Methods.getDateString(
-                                                        msg!!.date
-                                                    )
+                                            val userMsg =  MessageUser(
+                                                user,
+                                                msg!!.dataMsg.toString(),
+                                                Methods.getDateString(
+                                                    msg!!.date
                                                 )
                                             )
+
+                                            if (!usersMsg.contains(userMsg)){
+                                                usersMsg.add(userMsg)
+                                            }
+
                                             if (usersMsg.isNotEmpty()) {
                                                 Log.e("MSGSize", usersMsg.size.toString())
                                                 userAdapter.addDataMsg(usersMsg)
