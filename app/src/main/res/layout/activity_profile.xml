@@ -165,6 +165,7 @@
 
             <LinearLayout
                 android:id="@+id/isCar"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp">

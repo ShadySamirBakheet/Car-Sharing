@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:678758997036:android:ed045e67e089848dadc589",
         "android_client_info": {
-          "package_name": "shady.samir.carsharing"
+          "package_name": "com.app.carsharing"
         }
       },
       "oauth_client": [

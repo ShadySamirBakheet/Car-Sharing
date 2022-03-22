@@ -11,8 +11,8 @@
         android:layout_height="@dimen/_48sdp"
         android:layout_alignParentBottom="true"
         android:background="@color/bottomBar"
-        app:labelVisibilityMode="selected"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/user_menu"
+        app:labelVisibilityMode="selected" />
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_home"

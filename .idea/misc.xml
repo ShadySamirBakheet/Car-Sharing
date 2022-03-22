@@ -33,6 +33,8 @@
         <entry key="app/src/main/res/drawable/check2.xml" value="0.155" />
         <entry key="app/src/main/res/drawable/con_app.xml" value="0.155" />
         <entry key="app/src/main/res/drawable/empty.xml" value="0.155" />
+        <entry key="app/src/main/res/drawable/ic_chair.xml" value="0.1635" />
+        <entry key="app/src/main/res/drawable/ic_chair2.xml" value="0.1635" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_next.xml" value="0.155" />
         <entry key="app/src/main/res/drawable/logo.xml" value="0.131" />
@@ -44,7 +46,7 @@
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.16075245831551946" />
         <entry key="app/src/main/res/layout/activity_confirm_join.xml" value="0.18255664814023087" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.19583333333333333" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.166796875" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/activity_my_trips.xml" value="0.16075245831551946" />
@@ -56,6 +58,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_messages.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_chair.xml" value="0.166796875" />
         <entry key="app/src/main/res/layout/item_chat_in.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_chat_out.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_code.xml" value="0.19583333333333333" />
@@ -70,6 +73,7 @@
         <entry key="app/src/main/res/layout/msg_confrim_logout.xml" value="0.16075245831551946" />
         <entry key="app/src/main/res/layout/offline.xml" value="0.16075245831551946" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/menu/user_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

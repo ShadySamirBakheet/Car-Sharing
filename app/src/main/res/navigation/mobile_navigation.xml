@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="shady.samir.carsharing.views.home.ui.HomeFragment"
+        android:name="com.app.carsharing.views.home.ui.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_add_trip"
-        android:name="shady.samir.carsharing.views.home.ui.AddTripFragment"
+        android:name="com.app.carsharing.views.home.ui.AddTripFragment"
         android:label="@string/title_add_trip"
         tools:layout="@layout/fragment_add_trip" />
 
     <fragment
         android:id="@+id/navigation_messages"
-        android:name="shady.samir.carsharing.views.home.ui.MessagesFragment"
+        android:name="com.app.carsharing.views.home.ui.MessagesFragment"
         android:label="@string/title_messages"
         tools:layout="@layout/fragment_messages" />
 
     <fragment
         android:id="@+id/navigation_menu"
-        android:name="shady.samir.carsharing.views.home.ui.MenuFragment"
+        android:name="com.app.carsharing.views.home.ui.MenuFragment"
         android:label="@string/title_messages"
         tools:layout="@layout/fragment_menu" />
 </navigation>
