@@ -58,6 +58,14 @@ class ConfirmJoinActivity : AppCompatActivity() {
             saveData()
         }
 
+        binding.card.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked) {
+                binding.visaInfo.visibility = View.VISIBLE
+            } else {
+                binding.visaInfo.visibility = View.GONE
+            }
+        }
+
         binding.cardNumber.doOnTextChanged { text, start, before, count ->
             if (text?.length == 16) {
                 binding.isDone.visibility = View.VISIBLE
@@ -100,7 +108,7 @@ class ConfirmJoinActivity : AppCompatActivity() {
         val year = binding.year.text.toString().trim()
         val cvv = binding.cvv.text.toString().trim()
         val name = binding.userName.text.toString().trim()
-        if (cardNumber.isNotEmpty() && name.isNotEmpty() &&cvv.isNotEmpty() &&month.isNotEmpty() &&year.isNotEmpty() && cardNumber.length == 16) {
+        if (binding.cash.isChecked || binding.card.isChecked) {
             val joinTrip = JoinTrip(
                 System.currentTimeMillis().toString(),
                 name,
@@ -108,7 +116,8 @@ class ConfirmJoinActivity : AppCompatActivity() {
                 pointSelect,
                 pointSelect2,
                 price,
-                SharedStorage.getLoginPhoneData(this).toString()
+                SharedStorage.getLoginPhoneData(this).toString(),
+                isCash = binding.cash.isChecked && !binding.card.isChecked,
             )
 
             networkViewModel.networkState(this).observe(this) {

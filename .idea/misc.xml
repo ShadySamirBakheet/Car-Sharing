@@ -54,6 +54,7 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/activity_trip_details.xml" value="0.18255664814023087" />
         <entry key="app/src/main/res/layout/activity_trip_edit.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/dialog_leave_trip.xml" value="0.166796875" />
         <entry key="app/src/main/res/layout/fragment_add_trip.xml" value="0.21686746987951808" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.25" />
@@ -67,7 +68,7 @@
         <entry key="app/src/main/res/layout/item_spinner.xml" value="0.16075245831551946" />
         <entry key="app/src/main/res/layout/item_trip.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/item_trip_added.xml" value="0.16075245831551946" />
-        <entry key="app/src/main/res/layout/item_user_message.xml" value="0.4888888888888889" />
+        <entry key="app/src/main/res/layout/item_user_message.xml" value="0.29333333333333333" />
         <entry key="app/src/main/res/layout/laoding.xml" value="0.16075245831551946" />
         <entry key="app/src/main/res/layout/msg_codes.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/msg_confrim_logout.xml" value="0.16075245831551946" />

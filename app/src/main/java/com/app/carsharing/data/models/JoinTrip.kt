@@ -8,4 +8,5 @@ data class JoinTrip (
     val  pointId2:String?=null,
     val  price:Int?=null,
     val  uid:String?=null,
+    val  isCash:Boolean?=null,
 )

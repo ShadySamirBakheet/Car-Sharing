@@ -1,6 +1,7 @@
 package com.app.carsharing.views.trips
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -13,7 +14,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.app.carsharing.R
 import com.app.carsharing.adapters.ChairAdapter
 import com.app.carsharing.adapters.PointArrayAdapter
@@ -28,6 +28,7 @@ import com.app.carsharing.viewmodel.NetworkViewModel
 import com.app.carsharing.viewmodel.TripViewModel
 import com.app.carsharing.viewmodel.UserViewModel
 import com.app.carsharing.views.chats.ChatActivity
+import com.bumptech.glide.Glide
 
 class TripDetailsActivity : AppCompatActivity() {
 
@@ -50,6 +51,8 @@ class TripDetailsActivity : AppCompatActivity() {
     var trip: Trip = Trip()
     var user = User()
 
+    var tripJoin: JoinTrip? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -63,10 +66,9 @@ class TripDetailsActivity : AppCompatActivity() {
 
         tripId = intent.getStringExtra("tripId").toString()
 
-        userId =  intent.getStringExtra("userId").toString()
+        userId = intent.getStringExtra("userId").toString()
 
         myId = SharedStorage.getLoginPhoneData(this).toString()
-
 
 
         ///Toast.makeText(this, userId+tripId, Toast.LENGTH_SHORT).show()
@@ -116,6 +118,9 @@ class TripDetailsActivity : AppCompatActivity() {
 
         getData()
 
+        binding.leaveTrip.setOnClickListener {
+            leaveTrip()
+        }
 
         binding.chooseStart.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -156,6 +161,33 @@ class TripDetailsActivity : AppCompatActivity() {
                 ////TODO("Not yet implemented")
             }
         }
+
+
+    }
+
+    private fun leaveTrip() {
+        val builder = AlertDialog.Builder(this)
+
+        builder.setTitle("Are you sure?")
+            .setMessage("You will be removed from this trip")
+            .setPositiveButton("Ok") { dialogInterface, _ ->
+                leaveTripApi()
+                dialogInterface.dismiss()
+            }
+            .setNegativeButton("Cancel") { dialogInterface, _ ->
+                dialogInterface.dismiss()
+            }
+        builder.create().show()
+    }
+
+    private fun leaveTripApi() {
+
+        networkViewModel.networkState(this).observe(this) {
+            if (it) {
+                tripViewModel.leaveTrip(tripJoin, tripId, userId)
+            }
+
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -165,11 +197,13 @@ class TripDetailsActivity : AppCompatActivity() {
             binding.joinInfo.visibility = GONE
             binding.joinTrip.visibility = GONE
             binding.goChat.visibility = GONE
+            binding.leaveTrip.visibility = GONE
             binding.edit.visibility = VISIBLE
         } else {
             binding.joinTrip.visibility = VISIBLE
             binding.goChat.visibility = VISIBLE
             binding.edit.visibility = GONE
+            binding.leaveTrip.visibility = GONE
             binding.joinInfo.visibility = VISIBLE
         }
 
@@ -198,14 +232,15 @@ class TripDetailsActivity : AppCompatActivity() {
                                 points.add(item!!.getValue(TripPoint::class.java)!!)
                             }
 
-                            trip.joined =  data2.child("joins").children.count()
+                            trip.joined = data2.child("joins").children.count()
 
-                            if ( data2.child("joins").hasChildren()){
+                            if (data2.child("joins").hasChildren()) {
                                 data2.child("joins").children.forEach {
-                                    val tripJoin = it.getValue(JoinTrip::class.java)
-                                    if (tripJoin !=null){
-                                        if (tripJoin.uid == myId){
+                                    tripJoin = it.getValue(JoinTrip::class.java)
+                                    if (tripJoin != null) {
+                                        if (tripJoin!!.uid == myId) {
 
+                                            binding.leaveTrip.visibility = VISIBLE
                                             binding.joinTrip.visibility = GONE
                                         }
                                     }
@@ -214,13 +249,21 @@ class TripDetailsActivity : AppCompatActivity() {
 
                             binding.chairs.apply {
                                 setHasFixedSize(true)
-                                layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-                                adapter = ChairAdapter(this@TripDetailsActivity,trip.numberSeats ?: 0,trip.joined?:0)
+                                layoutManager = LinearLayoutManager(
+                                    context,
+                                    LinearLayoutManager.HORIZONTAL,
+                                    false
+                                )
+                                adapter = ChairAdapter(
+                                    this@TripDetailsActivity,
+                                    trip.numberSeats ?: 0,
+                                    trip.joined ?: 0
+                                )
                             }
 
-                           // Toast.makeText(this, "Sead ${trip.numberSeats } joined ${trip.joined}", Toast.LENGTH_SHORT).show()
+                            // Toast.makeText(this, "Sead ${trip.numberSeats } joined ${trip.joined}", Toast.LENGTH_SHORT).show()
 
-                            if (trip.numberSeats == trip.joined){
+                            if (trip.numberSeats == trip.joined) {
                                 binding.joinTrip.visibility = GONE
                             }
 
