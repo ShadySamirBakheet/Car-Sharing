@@ -58,7 +58,7 @@ class TripViewModel (application: Application): AndroidViewModel(application) {
 
     fun leaveTrip(tripJoin: JoinTrip?,id:String, uid:String): Task<Void> {
 
-        return tripRef.child("$uid/$id/joins/${tripJoin!!.id}").setValue(tripJoin)
+        return tripRef.child("$uid/$id/joins/${tripJoin!!.id}").removeValue()
     }
 
 }

@@ -185,6 +185,7 @@ class TripDetailsActivity : AppCompatActivity() {
         networkViewModel.networkState(this).observe(this) {
             if (it) {
                 tripViewModel.leaveTrip(tripJoin, tripId, userId)
+                finish()
             }
 
         }
