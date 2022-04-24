@@ -180,6 +180,8 @@ class TripDetailsActivity : AppCompatActivity() {
         builder.create().show()
     }
 
+
+
     private fun leaveTripApi() {
 
         networkViewModel.networkState(this).observe(this) {
